@@ -135,7 +135,7 @@ SRCS			=	$(addprefix $(SRCS_PATH), $(ALL_SRCS))
 
 INCLUDES		=	-I $(INCS_PATH)
 
-FLAGS			=	-Wall -Wextra -Werror -g3
+CFLAGS			=	-Wall -Wextra -Werror -g3
 
 DEPFLAGS		=	-MP -MMD
 
@@ -146,7 +146,7 @@ $(NAME): $(OBJS)
 
 $(BUILD_PATH)%.o: %.c
 	mkdir -p $(dir $@)
-	gcc -c $< -o $@ $(INCLUDES) $(FLAGS) $(DEPFLAGS)
+	gcc -c $< -o $@ $(INCLUDES) $(CFLAGS) $(DEPFLAGS)
 
 clean:
 	rm -rf $(BUILD_PATH)
@@ -154,7 +154,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean
+	make all
 
 -include $(DEP)
 
