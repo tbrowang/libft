@@ -30,7 +30,12 @@ SRCS_STRINGS	=	ft_strlen.c				\
 					ft_striteri.c			\
 					ft_split.c				\
 					ft_strcmp.c				\
-					fill_str.c
+					fill_str.c				\
+					cmatrix/cmatrix_free.c	\
+					cmatrix/cmatrix_size.c	\
+					cmatrix/cmatrix_join.c
+					
+					
 
 SRCS_CTYPES		=	ft_isascii.c			\
 					ft_isalnum.c			\

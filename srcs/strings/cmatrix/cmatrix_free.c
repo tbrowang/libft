@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   cmatrix_free.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbrowang <tbrowang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 04:49:04 by tbrowang          #+#    #+#             */
-/*   Updated: 2022/07/25 22:57:47 by tbrowang         ###   ########.fr       */
+/*   Created: 2022/07/25 22:53:56 by tbrowang          #+#    #+#             */
+/*   Updated: 2022/07/25 23:24:10 by tbrowang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_min(int a, int b)
+#include <stdlib.h>
+
+void	cmatrix_free(char **cmatrix)
 {
-	if (a <= b)
-		return (a);
-	return (b);
+	int		i;
+
+	i = 0;
+	while (cmatrix[i])
+		free(cmatrix[i++]);
+	free(cmatrix);
 }
