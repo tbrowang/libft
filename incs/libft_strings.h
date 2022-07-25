@@ -6,7 +6,7 @@
 /*   By: tbrowang <tbrowang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 07:05:28 by tbrowang          #+#    #+#             */
-/*   Updated: 2022/07/25 23:26:34 by tbrowang         ###   ########.fr       */
+/*   Updated: 2022/07/25 23:41:23 by tbrowang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_STRINGS_H
 
 # include <stddef.h>
+# include "libft_bool.h"
 
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
@@ -37,5 +38,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 void	cmatrix_free(char **cmatrix);
 int		cmatrix_size(char **cmatrix);
 char	**cmatrix_join(char **cmatrix1, char **cmatrix2);
+
+t_bool	endwith(char *str, char *end);
 
 #endif

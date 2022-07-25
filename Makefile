@@ -31,6 +31,7 @@ SRCS_STRINGS	=	ft_strlen.c				\
 					ft_split.c				\
 					ft_strcmp.c				\
 					fill_str.c				\
+					endwith.c				\
 					cmatrix/cmatrix_free.c	\
 					cmatrix/cmatrix_size.c	\
 					cmatrix/cmatrix_join.c
